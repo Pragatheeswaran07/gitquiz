@@ -1,16 +1,44 @@
-
 import './App.css';
 import React,{useState} from 'react';
-import question from './Components/question';
 function App() {
+  const question=[
+    {
+      questioninx:"What is the old name of the php",
+      option:["Come to my home","home page","web page","php page"],
+      answer:1,
+    },
+    {
+       
+        questioninx:"Php current version is",
+        option:["7.1","9.0","8.0","5.4"],
+        answer:2,
+  
+    },
+    {
+        questioninx:"What is your name",
+        option:["naveen","ajay","vijay","fck**"],
+        answer:0,
+      },
+      {
+        questioninx:"Rating for this quiz game ",
+        option:["one","two","three","four"],
+        answer:1,
+      }
+        
+]
+
+
+
+
   const[questions,setQuestions]=useState(0)
-  const currentquestion=question[questions]
-   const setopiton=(ind)=>{
+  let currentquestion=question[questions]
+   const setoption=(ind)=>{
     if(currentquestion.answer===ind){
+      console.log(ind)
       alert("currect anser");
-      setQuestions(questions+1)
+      
     }
-    currentquestion++;
+    setQuestions(questions+1)
    }
 
 
@@ -26,7 +54,7 @@ function App() {
             {
             currentquestion.option.map((options,i)=>
             {
-            return <li><button onClick={()=>setopiton(i)}>{options}</button></li>
+            return <li><button onClick={()=>setoption(i)}>{options}</button></li>
             }
             )
             }
