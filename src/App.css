@@ -3,7 +3,7 @@
   margin:0;
   height: 100vh;
   width:100vw;
-  background:linear-gradient(to right,skyblue,white);  
+  background:linear-gradient(to right,rgb(243, 124, 213),rgb(102, 72, 211));  
   display: flex;
   justify-content:center;
   
@@ -13,10 +13,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: blanchedalmond;
+  height: 500px;
+  width: 500px;
+  background:linear-gradient(to right,rgb(243, 124, 213),rgb(102, 72, 211));  
+  border-radius: 1rem;
   
 }
 .box1{
+  background: transparent;
+  
   
   padding: 4rem;
   
@@ -33,4 +38,30 @@ ul{
   grid-template-columns:1fr 1fr;
   grid-template-rows:1fr 1fr;
   grid-gap:4rem;
+}
+button{
+  width: 120px;
+  height: 50px;
+  text-align: center;
+  box-shadow: 4px 4px rgba(0,0,0,0.2);
+  border:transparent;
+  border-radius: 10px;
+
+}
+button:hover{
+  box-shadow: 10px 10px 10px;
+}
+.p1{
+  text-align: center;
+  color: rgb(32, 32, 182);
+  font-size: larger;
+  font-weight: bold;
+
+}
+.h4{
+  font-size: 1.1rem;
+}
+span{
+  color: rgb(20, 240, 137);
+  text-align: center;
 }

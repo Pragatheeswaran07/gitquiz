@@ -1,0 +1,74 @@
+warning: in the working copy of 'src/App.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/App.js', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/src/App.css b/src/App.css[m
+[1mindex 56738e3..ddaa310 100644[m
+[1m--- a/src/App.css[m
+[1m+++ b/src/App.css[m
+[36m@@ -13,6 +13,8 @@[m
+   flex-direction: column;[m
+   justify-content: center;[m
+   align-items: center;[m
+[32m+[m[32m  height: 500px;[m
+[32m+[m[32m  width: 500px;[m
+   background-color: blanchedalmond;[m
+   [m
+ }[m
+[36m@@ -33,4 +35,7 @@[m [mul{[m
+   grid-template-columns:1fr 1fr;[m
+   grid-template-rows:1fr 1fr;[m
+   grid-gap:4rem;[m
+[32m+[m[32m}[m
+[32m+[m[32mbutton{[m
+[32m+[m[32m  padding: 1rem 4rem;[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/src/App.js b/src/App.js[m
+[1mindex 0de4c3d..37b2561 100644[m
+[1m--- a/src/App.js[m
+[1m+++ b/src/App.js[m
+[36m@@ -3,23 +3,26 @@[m [mimport React,{useState} from 'react';[m
+ function App() {[m
+   const question=[[m
+     {[m
+[32m+[m[32m      sno:1,[m
+       questioninx:"What is the old name of the php",[m
+       option:["Come to my home","home page","web page","php page"],[m
+       answer:1,[m
+     },[m
+     {[m
+[31m-       [m
+[32m+[m[32m       sno:2,[m
+         questioninx:"Php current version is",[m
+         option:["7.1","9.0","8.0","5.4"],[m
+         answer:2,[m
+   [m
+     },[m
+[31m-    {[m
+[32m+[m[32m    {[m[41m  [m
+[32m+[m[32m        sno:5,[m
+         questioninx:"What is your name",[m
+         option:["naveen","ajay","vijay","fck**"],[m
+         answer:0,[m
+       },[m
+       {[m
+[32m+[m[32m        sno:4,[m
+         questioninx:"Rating for this quiz game ",[m
+         option:["one","two","three","four"],[m
+         answer:1,[m
+[36m@@ -46,7 +49,7 @@[m [mfunction App() {[m
+     <div className="App">[m
+       <div className="container">[m
+         <div className="box1">[m
+[31m-          <p>question 1</p>[m
+[32m+[m[32m          <p>question {currentquestion.sno}</p>[m
+           <h4>{currentquestion.questioninx}</h4>[m
+         </div>[m
+         <div className="box2">[m
+[36m@@ -61,6 +64,7 @@[m [mfunction App() {[m
+           </ul>[m
+         </div>[m
+       </div>[m
+[32m+[m[41m      [m
+       </div>[m
+   );[m
+ }[m
